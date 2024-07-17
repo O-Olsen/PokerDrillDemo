@@ -45,6 +45,9 @@
         #endregion
 
         #region DPs
+        /// <summary>
+        /// Gets or sets the items source
+        /// </summary>
         public IEnumerable<HandStrategyModel> ItemsSource
         {
             get { return (IEnumerable<HandStrategyModel>)GetValue(ItemsSourceProperty); }
@@ -54,6 +57,9 @@
         public static readonly DependencyProperty ItemsSourceProperty =
             DependencyProperty.Register("ItemsSource", typeof(IEnumerable<HandStrategyModel>), typeof(StrategyRangePresenter), new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.AffectsRender));
 
+        /// <summary>
+        /// Gets or sets the grid lines brush
+        /// </summary>
         public Brush GridLinesBrush
         {
             get => (Brush)GetValue(GridLinesBrushProperty);
@@ -63,6 +69,9 @@
         public static readonly DependencyProperty GridLinesBrushProperty =
             DependencyProperty.Register("GridLinesBrush", typeof(Brush), typeof(StrategyRangePresenter), new FrameworkPropertyMetadata(Brushes.Red, FrameworkPropertyMetadataOptions.AffectsRender));
 
+        /// <summary>
+        /// Gets or sets the command that should be executed upon item click.
+        /// </summary>
         public ICommand Command
         {
             get => (ICommand)GetValue(CommandProperty);
